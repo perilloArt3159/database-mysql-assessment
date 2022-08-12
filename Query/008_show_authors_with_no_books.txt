@@ -1,8 +1,8 @@
-# Show all authors with books
+# Show all authors with no books
 
 SELECT Authors.name as author, COUNT(Book_Author.author_id) AS books_authored
 	FROM Authors 
     	LEFT JOIN Book_Author 
         	ON Book_Author.author_id = Authors.id 
-    GROUP BY Authors.name
-    HAVING books_authored > 0;
+        GROUP BY Authors.name
+    HAVING books_authored = 0;
