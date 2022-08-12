@@ -1,0 +1,11 @@
+# Show the authors of hamlet , lost time and greed
+
+SELECT Authors.name as author, Books.name as book FROM Authors
+	INNER JOIN Book_Author 
+    	ON Book_Author.author_id = Authors.id 
+    INNER JOIN Books 
+    	ON Books.id = Book_Author.book_id
+    WHERE Books.name = 'hamlet' 
+    	OR Books.name = 'lost time'
+        OR Books.name = 'greed'
+    GROUP BY Authors.name;
