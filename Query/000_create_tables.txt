@@ -34,7 +34,7 @@ INSERT INTO Books (name) VALUES
 ('greed'), 
 ('End Time');
 
-INSERT INTO Book_Author (book_id, author_id) VALUES 
+INSERT INTO Book_Author (author_id, book_id) VALUES 
 (1, 2), 
 (1, 3), 
 (3, 1), 

@@ -1,0 +1,5 @@
+# Replace jane’s lost time book to hamlet
+
+UPDATE Book_Author 
+SET book_id=5
+WHERE author_id=3; 
