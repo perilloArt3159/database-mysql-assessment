@@ -1,0 +1,4 @@
+# ASSIGN greed book to sam 
+
+INSERT INTO Book_Author (author_id, book_id) VALUES 
+(7, 5);
