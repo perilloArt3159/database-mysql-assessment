@@ -1,3 +1,3 @@
 # Database MySQL Assesment
 
-Assesment
+ERD and MySQL Query Assessment

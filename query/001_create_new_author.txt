@@ -1,0 +1,5 @@
+# INSERT two new Authors named jack and sam. 
+
+INSERT INTO Authors (name) VALUES 
+('jack'), 
+('sam');
