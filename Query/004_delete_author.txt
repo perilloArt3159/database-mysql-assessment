@@ -1,0 +1,3 @@
+# Delete axiel and it’s authored books
+
+DELETE FROM authors WHERE name = 'Axiel';
