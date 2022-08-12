@@ -1,0 +1,40 @@
+# Show authors with books and describe the output in writing when using the command below
+
+# INNER JOIN / JOIN 
+
+SELECT Authors.name as author, COUNT(Book_Author.author_id) AS books_authored
+	FROM Authors 
+    	INNER JOIN Book_Author 
+        	ON Book_Author.author_id = Authors.id 
+    GROUP BY Authors.name
+    HAVING books_authored > 0;
+
+/* 
+    INNER JOIN RETURNS RECORDS THAT ARE SIMILAR IN BOTH TABLES 
+*/ 
+
+# LEFT JOIN
+
+SELECT Authors.name as author, COUNT(Book_Author.author_id) AS books_authored
+	FROM Authors 
+    	LEFT JOIN Book_Author 
+        	ON Book_Author.author_id = Authors.id 
+    GROUP BY Authors.name
+    HAVING books_authored > 0;
+
+/* 
+    LEFT JOIN RETURNS ALL RECORDS FROM THE LEFT TABLE THEN THE MATCHED RECORDS FROM THE RIGHT  TABLE
+*/ 
+
+# RIGHT JOIN
+
+SELECT Authors.name as author, COUNT(Book_Author.author_id) AS books_authored
+	FROM Authors 
+    	RIGHT JOIN Book_Author 
+        	ON Book_Author.author_id = Authors.id 
+    GROUP BY Authors.name
+    HAVING books_authored > 0;
+
+/* 
+    RIGHT JOIN RETURNS ALL RECORDS FROM THE RIGHT TABLE THEN THE MATCHED RECORDS FROM THE LEFT TABLE
+*/ 
